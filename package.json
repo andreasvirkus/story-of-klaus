@@ -58,7 +58,7 @@
     "rollup-plugin-terser": "^7.0.0",
     "yargs": "^15.1.0"
   },
-  "browserslist": "> 0.5%, IE 11, not dead",
+  "browserslist": "last 2 Chrome versions",
   "eslintConfig": {
     "env": {
       "browser": true,
@@ -95,5 +95,6 @@
       "no-eq-null": 2,
       "no-unused-expressions": 0
     }
-  }
+  },
+  "dependencies": {}
 }

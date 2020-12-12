@@ -4,20 +4,62 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Klaus - story time</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/klaus.css">
 		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
 
 		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+    <link rel="stylesheet" href="dist/assets/moderat_bold.woff2" crossorigin="true">
+
+    <style>
+      .reveal section img {
+        background: none;
+        border: none;
+        box-shadow: none;
+        border-radius: 6px;
+      }
+
+      .reveal .font-small, .reveal blockquote { font-size: 0.6em; }
+      .reveal .font-smallest { font-size: 0.4em; }
+    </style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+          <div centered>
+            <img alt="Klaus" style="max-width: 50vh;" src="https://storage.googleapis.com/static_site_bucket/aed7b7b0-klaus_logo_white.svg" class="h-10 g-image">
+          </div>
+
+          <p class="font-small r-hstack justify-end" style="transform:translate(-150px,-100px)">
+            <em>...story time</em>
+          </p>
+        </section>
+
+				<section>
+          <img data-src="./assets/whoami.png" alt="whoami"/>
+        </section>
+
+        <section>
+          <h1>Klaus today</h1>
+
+          <p>Conversation review & <br>QA platform for support teams</p>
+
+          <aside class="notes" data-markdown>
+- Closing in on €1M ARR
+- €6M raised
+- 26 employees
+- Dealing with (rapidly increasing) large data volumes
+  - handling around `N` data points (TODO: ask @Joonathan for impressive facts here)
+  - Handling N conversations per day?
+  - ...X, Y, Z?
+-
+          </aside>
+        </section>
 			</div>
 		</div>
 
@@ -31,9 +73,10 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
+        transition: 'convex',
+        backgroundTransition: 'zoom',
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
 			});
 		</script>
 	</body>
