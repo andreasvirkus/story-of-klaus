@@ -55,54 +55,53 @@ where Klaus was when I joined in a bit, but first, let's talk about... 👉
           <p><b>Conversation review</b> <span style="opacity:0.8">&</span> <br><b>QA platform</b> <span style="opacity:0.8">for support teams</span></p>
 
           <aside class="notes" data-markdown>
+**NOTE**: Should this be the last slide in the yearly timeline? (See next slides)
+
 Where Klaus is today:
 
-- €6M raised
+- Over €6M raised
 - 26 employees
 - Closing in on €1M ARR
-- Dealing with (rapidly increasing) large data volumes
-  - handling around `N` data points (TODO: ask @Joonathan for impressive facts here)
-  - Handling N conversations per day?
-  - ...X, Y, Z?
-- Shipping fast and often, delivering (experimenting with?) machine learning
-- Restructuring (preparing to restructure...?) ourselves internally
+- Handling 1M conversations a day
+- Shipping fast and often
+- Delivering machine learning features
+- Restructuring ourselves internally (meaning we're at a point where a single
+  cluster of developers won't scale that well anymore)
           </aside>
         </section>
 
-        <!-- TODO: Ask Kaire which style is better -->
-        <!-- (No GIF-s is also an option; keep it classy, you know?) -->
-        <!-- A) Large GIF -->
-        <!-- <section data-auto-animate data-background="https://media.giphy.com/media/q7UpJegIZjsk0/giphy.gif"> -->
         <section data-auto-animate data-background="https://downloads.intercomcdn.com/i/o/186332/980085621a4a4d9c3bad59ec/e8d020610ec82c2ae005d04bd1085185.png" data-background-size="contain">
           <section>
-            <!-- <h1 style="background-color: rgba(0, 0, 0, 0.8); color: #fff; padding: 20px;">Klaus 2017</h1> -->
             <h1>Klaus 2017</h1>
 
             <p>The spark ✨</p>
 
             <aside class="notes" data-markdown>
-Let's start with our founders. Martin was the global head of customer support of Pipedrive at the time,
+So, it's the blissful year of 2017. Let's start with our founders. Martin was the global head of customer support of Pipedrive at the time,
 trying to figure out the most optimal way of tracking and measuring the quality of his team's support interactions.
 
 Excel quickly became painful, taking minutes to even load up the spreadsheet itself.
 
-Kair, Martin's lifelong friend and partner in crime for many former endeavours - decides to find a "less talk, let's build"
-developer (Egon) to construct the first prototype of Klaus.
+Kair, Martin's lifelong friend and partner in crime for many former endeavours, decides to find a "less talk, let's build"
+developer (Egon - founder #3) to construct the first prototype of Klaus. After the initial pitch to Egon, they
+started meeting weekly and exchanged ideas/visions for the product. Egon worked on the prototype in
+the evenings and iterated as quickly as possible on the small feedback sessions.
+
+Your first prototype should be like applying for a job - you'll need to show up, be dressed properly and
+leave a spectacular impression. You'll obviously need to perform once you're hired (aka land a client), but that **comes later**.
+Sell the best version of yourself (how you vision the product to work), but also be honest of where you're
+at today. For example, the prototype of Klaus was a Laravel app with great UX, but not the greatest architectural design
+to later scale the product. It'd hit the client's API rate limits, but it **sold the vision of Klaus**.
+And that's all that matters - as all those issues are already a **good problem to have**.
+
+As developers, we often strive for the most universal & elegant design of our systems,
+one that would withheld all of Facebook's current users migrating over to your small notes app.
+But that's a mindset you need to break when bootstrapping a startup. You need to acknowledge that
+your solutions will be dirty. It'll be hack-on-a-hack-on-a-hack for a while, until you can
+**afford to** take a step back - refactor & redesign things.
             </aside>
           </section>
-          <!-- B) Smol GIF -->
-          <!-- <section data-auto-animate>
-            <h1>Klaus 2017</h1>
 
-            <img data-src="https://media.giphy.com/media/q7UpJegIZjsk0/giphy.gif" class="gif" />
-
-            <aside class="notes" data-markdown>
-  Kair and Martin (describe the background of each) decide to find a "less talk, let's build"
-  developer (Egon) to construct the first prototype of Klaus.
-            </aside>
-          </section> -->
-
-          <!-- <section data-auto-animate data-background="https://media.giphy.com/media/emR6Upn5la4hO/giphy.gif"> -->
           <section data-auto-animate>
             <h1>
               <span data-id="klaus-2018">Klaus 2018:</span> part I
@@ -111,14 +110,21 @@ developer (Egon) to construct the first prototype of Klaus.
             <p>Gone fishing 🐳</p>
 
             <aside class="notes" data-markdown>
-MVP launches, Klaus lands their first clients and pre-seed funding.
+Our MVP launches, Klaus lands their first two clients and pre-seed funding. Time to grow!
 
-Talk about how crucial your first users are and how they'll almost feel like
-employees if utilised (and served!) right.
+Your first clients are crucial. Talk to them frequently, keep them in the loop about
+developments and features planned and they become like your team members. You
+get a very short feedback loop around everything + those bugs they discover will
+be reported with a lot less frustration if they feel heard.
 
-Try to profile early employees - multitools, passionate, adaptable.
+It's tricky to profile early employees - you'll need passionate multitools, who can
+adapt to anything. But you can't throw an interviewee into a burning room and say
 
-TODO: Ask Martin what happened 2018 January <=> July
+> _"Let's see you adapt to this one. Bonus points if you're passionate about it and
+also man the customer support at the same time."_
+
+TODO: Ask Martin what happened 2018 January <=> July. Ask about hiring insight
+and why he went with Karmo and me out of the other candidates.
             </aside>
           </section>
 
@@ -131,17 +137,29 @@ TODO: Ask Martin what happened 2018 January <=> July
             <p>The build-up 🔨</p>
 
             <aside class="notes" data-markdown>
-Summer: two wild cowboys join and declare they want to build a new thing from scratch.
+Summer: two hothead developer-cowboys join and declare they want to build a new thing from scratch.
 => Discuss through the architectural trade-offs, etc
+
+It's very stereotypical for a new developer to fly in and state that the
+old must go and they can always do it better. So look for rational arguments and
+hear them out, but remain sceptical.
 
 Fall: we almost freeze the product, working full-time on the new version from scratch.
 Egon continues to deliver features on the MVP, but some features are cut to not
-deliver them twice (MVP + v1.0).
+deliver them twice (both in the MVP that's still live + v1.0).
 
-Meanwhile sales does a lot of cold outreach, teasing the promise of v1.0
+Meanwhile sales does a lot of cold outreach, teasing the promise of v1.0,
+as the new infrastructure enables a lot of things that both the current prototype
+doesn't and it's often things that the users are looking for. Scope creep is also tricky
+to manage, as each new lead has a thing they **definitely need** to even consider you.
+
+If you're a team that can iterate fast, those **must-have** things can be
+a great way to impress some leads, especially if you can translate them into a little
+more universal features that can benefit everyone.
 
 We get the v1.0 launched within 2 months. It feels as a huge accomplishment, but
 has little impact on the business. Meanwhile, our runway's stretching mighty thin.
+The year - despite all the 8-23 work days - ends on a bitter note.
             </aside>
           </section>
 
@@ -151,15 +169,20 @@ has little impact on the business. Meanwhile, our runway's stretching mighty thi
             <p>Take-off! 🚀</p>
 
             <aside class="notes" data-markdown>
-The year starts off incredibly strong. It finally seems that v1.0 actually paid off.
+The year starts off incredibly strong. We land huge annual contracts & it finally seems that v1.0 actually paid off.
 
-Acquiring new customers, employees, polishing the product, talk **gravity** and attracting
-talent (Valentina, Medea).
+TODO: Discuss with Martin 👇
+- Acquiring new customers
+- Employees
+- Polishing the product,
+- Talk **gravity** and attracting talent (Valentina, Medea)
 
 Engineering worries about scale & performance. CEO keeps reminding us to not over-optimise
-for non-existing hypotheticals and... 👇
+for non-existing hypotheticals as... 👇
 
-> That's already a good problem to have (get. there. first.)
+> _"That's already a good problem to have"_ (aka Get. There. First.)
+
+We land our seed-round investment and expand our team (Chris, CTO, new engineers, ...)
             </aside>
           </section>
 
@@ -169,14 +192,28 @@ for non-existing hypotheticals and... 👇
             <p>Hitting orbit 🌍</p>
 
             <aside class="notes" data-markdown>
-The year starts off incredibly strong. It finally seems that v1.0 actually paid off.
+2020 is an exciting year. We're teased by clients as large as our current user-base combined.
+Architectural challenges follow, as we need to keep iterating and delivering new features
+(especially for the new larger, enterprise deals) yet also not crumble under the potential
+volume that they'd bring.
 
-Acquiring new customers, employees, polishing the product, talk **gravity** and attracting
-talent (Valentina, Medea).
+TODO: Write out product development challenges
+
+TODO: Ask Martin or Merily for growth/business highlights and challenges
             </aside>
           </section>
         </section>
 
+
+        <section data-background="https://www.klausapp.com/assets/img/blue_bg.9be130d6.svg" data-background-size="contain" data-markdown>
+# Check meow-t
+
+If Klaus piqued your interest, join us
+[klausapp.com/jobs](https://www.klausapp.com/jobs)
+
+- Your company will love us
+- Or you might love us as your next employer
+        </section>
 
         <section data-background="https://www.klausapp.com/assets/img/blue_bg.9be130d6.svg" data-background-size="contain" data-markdown>
           # Thanks!
