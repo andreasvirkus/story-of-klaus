@@ -18,11 +18,27 @@
         background: none;
         border: none;
         box-shadow: none;
-        border-radius: 6px;
+        border-radius: 10px;
       }
 
       .reveal .font-small, .reveal blockquote { font-size: 0.6em; }
       .reveal .font-smallest { font-size: 0.4em; }
+
+      .logo-grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .logo-grid img {
+        flex: 1;
+        flex-basis: 120px;
+        min-width: 15%;
+        padding: 0 16px;
+        height: 64px;
+        max-height: 64px;
+      }
     </style>
 	</head>
 	<body>
@@ -50,13 +66,28 @@ where Klaus was when I joined in a bit, but first, let's talk about... 👉
 
         <!-- TODO: Should this be the last slide in the timeline sequence? -->
         <section data-background="https://www.klausapp.com/assets/img/blue_bg.9be130d6.svg" data-background-size="contain">
-          <h2>Klaus today</h2>
+          <section>
+            <h2>Klaus today</h2>
 
-          <p><b>Conversation review</b> <span style="opacity:0.8">&</span> <br><b>QA platform</b> <span style="opacity:0.8">for support teams</span></p>
+            <p><b>Conversation review</b> <span style="opacity:0.8">&</span> <br><b>QA platform</b> <span style="opacity:0.8">for support teams</span></p>
 
-          <video preload="metadata" playsinline="" muted="muted" loop="loop" autoplay="autoplay" style="max-width: 50%">
-            <source src="https://storage.googleapis.com/static_site_bucket/9aed65f7-quality_assurance_960px.mp4" type="video/mp4">
-          </video>
+            <video preload="metadata" playsinline="" muted="muted" loop="loop" autoplay="autoplay" style="max-width: 50%; border-radius: 10px;">
+              <source src="https://storage.googleapis.com/static_site_bucket/9aed65f7-quality_assurance_960px.mp4" type="video/mp4">
+            </video>
+          </section>
+
+          <section>
+            <h2>Clients</h2>
+            <div style="background:white; border-radius: 10px; padding:32px 140px;" class="logo-grid">
+              <img alt="Automattic Logo" src="assets/automattic.svg" class="lg:m-0 m-4 w-auto g-image">
+              <img alt="Soundcloud Logo" src="assets/soundcloud.svg" class="lg:m-0 m-4 w-auto g-image">
+              <img alt="" src="assets/epic-games.svg" class="lg:m-0 m-4 w-auto g-image">
+              <img alt="Wistia Logo" src="assets/wistia.svg" class="lg:m-0 m-4 w-auto g-image">
+              <img alt="doodle logo" src="assets/doodle.svg" class="lg:m-0 m-4 w-auto g-image">
+              <img alt="pandadoc logo" src="assets/pandadoc.svg" class="lg:m-0 m-4 w-auto g-image">
+              <img alt="" src="assets/logo-hotjar.svg" class="lg:m-0 m-4 w-auto g-image">
+            </div>
+          </section>
 
           <aside class="notes" data-markdown>
 1. What is Klaus
@@ -204,7 +235,10 @@ for non-existing hypotheticals as... 👇
 
             <p>Hitting orbit 🌍</p>
 
-            <p>@kaire image/GIF of current product here?</p>
+            <video preload="metadata" muted="muted" poster="https://storage.googleapis.com/static_site_bucket/4599391d-video@2x-2.jpg" class="video" controls=""
+            style="max-width: 70%; border-radius: 10px;"><source src="https://klaus.fra1.cdn.digitaloceanspaces.com/features_1.25x_homepage_h264_250kbps.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
 
             <aside class="notes" data-markdown>
 2020 is an exciting year. We're teased by clients as large as our current user-base combined.
